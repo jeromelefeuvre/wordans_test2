@@ -50,6 +50,7 @@ gem 'haml-rails', '~> 0.5.3'
 group :development, :test do
   gem 'rspec-rails',        '~> 2.14.1'
   gem 'factory_girl_rails', '~> 4.3.0'
+  gem 'spork-rails',        '~> 4.0.0'   # USE: Speed up the local test process by forking early in the boot process
 end
 
 # Use ActiveModel has_secure_password
