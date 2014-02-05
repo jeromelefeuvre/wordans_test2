@@ -32,11 +32,26 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  gem 'better_errors',    '~> 0.9.0'  # Better errors
+  gem 'binding_of_caller'
+
+  gem 'bullet', '~> 4.7.1'            # n+1 detection
+
+  gem 'jazz_hands', '~> 0.5.2'        # Pry-based enhancements for the default Rails 3 console
+end
+
+gem 'haml-rails', '~> 0.5.3'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.14.1'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
