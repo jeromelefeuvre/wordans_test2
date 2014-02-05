@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Test2</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+!!!
+%html
+  %head
+    %title Test2
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
 
-<%= yield %>
-
-</body>
-</html>
+  %p{:class => "notice"}
+    = notice
+  %p{:class => "alert"}
+    = alert
+  = yield
