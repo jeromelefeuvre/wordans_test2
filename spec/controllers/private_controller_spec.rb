@@ -6,7 +6,7 @@ describe PrivateController do
       before { get :index }
 
       it "should redirect" do
-        expect(response).to redirect_to(user_session_path)
+        expect(response).to redirect_to(public_path)
       end
     end
 
